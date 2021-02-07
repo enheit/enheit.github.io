@@ -1,0 +1,15 @@
+name: Publish personal blog
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: enriikke/gatsby-gh-pages-action@v2.1.1
+        with:
+          access-token: ${{ secrets.DEPLOY_PERSONAL_BLOG }}
+          deploy-branch: gh-pages
