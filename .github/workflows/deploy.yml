@@ -13,3 +13,4 @@ jobs:
         with:
           access-token: ${{ secrets.DEPLOY_PERSONAL_BLOG }}
           deploy-branch: gh-pages
+          gatsby-args: --no-color
