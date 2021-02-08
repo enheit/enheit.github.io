@@ -5,7 +5,6 @@ module.exports = {
   plugins: [
     "gatsby-plugin-styled-components",
     "gatsby-transformer-remark",
-    "gatsby-transformer-typescript-css-modules",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -19,7 +18,6 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
-    "gatsby-plugin-fontawesome-css"
   ],
   
 };
