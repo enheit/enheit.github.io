@@ -21,6 +21,11 @@ export const $FaTwitter = styled(FaTwitter)`
   color: #1DA1F2;
 `
 
+export const $ExternalLink = styled.a`
+  text-decoration: none;
+  font-weight: bold;
+`
+
 export const $Contacts = styled.p`
   margin: 0;
   margin-top: ${typography.rhythm(0.1)}

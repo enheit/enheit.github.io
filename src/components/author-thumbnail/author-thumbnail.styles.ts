@@ -29,6 +29,7 @@ export const $Thumbnail = styled.div`
 
 export const $Title = styled.h4`
   margin: 0;
+  color: ${props => props.theme.global.color};
 `
 
 export const $Avatar = styled.img`
