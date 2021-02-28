@@ -1,14 +1,8 @@
 import "@fontsource/biryani/900.css"
 import { graphql, PageProps } from 'gatsby'
 import React, { FC, useMemo } from "react"
-import styled from 'styled-components'
 import { ArticleThumbnail } from '../components/article-thumbnail/article-thumbnail'
 import { Layout } from '../components/layout/layout'
-import typography from '../utils/typography'
-
-const $AuthorContainer = styled.div`
-  margin-bottom: ${typography.rhythm(2)};
-`
 
 interface IndexPageQueryDatum {
   node: {
@@ -50,13 +44,7 @@ const IndexPage: FC<PageProps<IndexPageDataType>> = props => {
   }
 
   return (
-    <Layout>
-      {/* <$AuthorContainer>
-        <AuthorThumbnail />
-      </$AuthorContainer>
-       */}
-
-      
+    <Layout>      
       {postCount > 0 
         ? props.data.allMarkdownRemark.edges.map(renderItem)
         : <p>There are no blog posts</p>

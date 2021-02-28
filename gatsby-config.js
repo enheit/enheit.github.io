@@ -3,9 +3,15 @@ module.exports = {
     title: "enheits' title",
   },
   plugins: [
+    {
+      resolve: `gatsby-styled-components-dark-mode`,
+      options: {
+        light: require(`${__dirname}/src/utils/theme.js`).lightTheme,
+        dark: require(`${__dirname}/src/utils/theme.js`).darkTheme,
+      },
+    },
     "gatsby-plugin-styled-components",
     "gatsby-transformer-remark",
-    "gatsby-transformer-typescript-css-modules",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -19,7 +25,6 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
-    "gatsby-plugin-fontawesome-css"
   ],
   
 };

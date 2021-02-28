@@ -1,20 +1,20 @@
-import React, { FC } from 'react'
-import { $Link } from '../../styles/Link'
-import { $Contacts, $FaEnvelope, $FaGithub, $FaTwitter, $Footer } from './footer.styles'
+import React, { FC, useContext } from 'react';
+import { ThemeContext } from 'styled-components';
+import { $Contacts, $ExternalLink, $FaEnvelope, $FaGithub, $FaTwitter, $Footer } from './footer.styles';
 
 export const Footer: FC = props => {
+  const theme = useContext(ThemeContext);
+
   return (
     <$Footer>
-      {/* <small>❤  {format(new Date(), "yyyy")}</small> */}
-
       <$Contacts>
-          <$Link to="https://twitter.com/enheit">
+          <$ExternalLink href="https://twitter.com/enheit">
             <$FaTwitter />
-          </$Link>
+          </$ExternalLink>
           
-          <$Link to="https://github.com/enheit">
-            <$FaGithub />
-          </$Link>
+          <$ExternalLink href="https://github.com/enheit">
+            <$FaGithub color={theme.isDark ? 'white' : 'black'} />
+          </$ExternalLink>
           
           <a href="mailto: roman.mahotskyi@gmail.com">
             <$FaEnvelope />
